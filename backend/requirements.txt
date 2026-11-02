@@ -1,0 +1,3 @@
+fastapi # веб-фреймворк приложения
+uvicorn[standard] # сервер для запуска FastAPI
+strawberry-graphql[fastapi] # GraphQL для FastAPI

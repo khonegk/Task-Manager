@@ -1,0 +1,157 @@
+* { /* учитываем рамки и отступы в ширине элементов */
+  box-sizing: border-box;
+}
+
+body { /* базовые цвета и шрифт */
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f3f5f8;
+  color: #1c2430;
+}
+
+.app { /* центрируем содержимое страницы */
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 28px;
+}
+
+button { /* внешний вид кнопок */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2a5bd7;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { /* цвет активной кнопки при наведении */
+  background: #1f47aa;
+}
+
+button:disabled { /* вид отключённой кнопки */
+  opacity: 0.6;
+  cursor: default;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #9db8f5;
+  outline-offset: 2px;
+}
+
+.task-form { /* поле и кнопка формы */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.task-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 12px;
+  border: 1px solid #c3cad6;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.task-list { /* список карточек задач */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task { /* карточка задачи */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #dde2ea;
+  border-radius: 8px;
+}
+
+.task h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.task p {
+  margin: 0 0 8px;
+  color: #556070;
+  font-size: 14px;
+}
+
+.task-done h3 { /* стиль выполненной задачи */
+  text-decoration: line-through;
+  color: #7b8696;
+}
+
+.done-label {
+  color: #1d7a46;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.badge { /* бейдж категории */
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: #e5e8ee;
+  color: #3b4554;
+}
+
+.badge-blue { /* синяя категория */
+  background: #dce7ff;
+  color: #1f47aa;
+}
+
+.badge-green { /* зелёная категория */
+  background: #d9f2e3;
+  color: #1d7a46;
+}
+
+.badge-red { /* красная категория */
+  background: #fde0e0;
+  color: #a12a2a;
+}
+
+.badge-gray { /* серая категория */
+  background: #e5e8ee;
+  color: #3b4554;
+}
+
+.status { /* сообщения о состоянии списка */
+  padding: 16px;
+  text-align: center;
+  color: #556070;
+}
+
+.status-error { /* сообщение об ошибке */
+  background: #fff1f1;
+  border: 1px solid #f0b8b8;
+  border-radius: 8px;
+  color: #a12a2a;
+}
+
+.status-error p {
+  margin: 0 0 8px;
+}
+
+.form-error { /* ошибка формы или задачи */
+  width: 100%;
+  margin: 0;
+  color: #a12a2a;
+  font-size: 14px;
+}
